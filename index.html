@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHub | Student Learning Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <h2>Learn<span>Hub.</span></h2>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#courses">Courses</a>
+            <a href="#dashboard">Dashboard</a>
+        </nav>
+
+        <button class="profile-btn" onclick="showDashboard()">
+            My Learning
+        </button>
+    </header>
+
+    <section class="hero" id="home">
+        <div>
+            <p class="tagline">LEARN • GROW • SUCCEED</p>
+            <h1>Upgrade Your Skills.<br>
+                Build Your Future.</h1>
+            <p>Explore professional courses and learn at your own pace.</p>
+            <a href="#courses" class="primary-btn">Explore Courses</a>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div>
+            <h2 id="totalCourses">0</h2>
+            <p>Available Courses</p>
+        </div>
+        <div>
+            <h2 id="enrolledCount">0</h2>
+            <p>Enrolled Courses</p>
+        </div>
+        <div>
+            <h2 id="completedCount">0</h2>
+            <p>Completed Courses</p>
+        </div>
+    </section>
+
+    <section class="courses-section" id="courses">
+
+        <div class="section-heading">
+            <div>
+                <p class="tagline">OUR PROGRAMS</p>
+                <h2>Explore Courses</h2>
+            </div>
+        </div>
+
+        <div class="filters">
+            <input type="text" id="searchInput" placeholder="Search courses...">
+
+            <select id="categoryFilter">
+                <option value="All">All Categories</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Programming">Programming</option>
+                <option value="Database">Database</option>
+                <option value="Design">Design</option>
+            </select>
+        </div>
+
+        <div class="course-grid" id="courseList"></div>
+
+    </section>
+
+    <section class="dashboard" id="dashboard">
+
+        <p class="tagline">YOUR LEARNING SPACE</p>
+        <h2>Student Dashboard</h2>
+
+        <div id="dashboardCourses" class="dashboard-list"></div>
+
+    </section>
+
+    <footer>
+        <h2>LearnHub.</h2>
+        <p>Empowering students through digital learning.</p>
+        <p>© 2026 LearnHub. All Rights Reserved.</p>
+    </footer>
+
+    <div id="courseModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">×</button>
+            <div id="modalDetails"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
